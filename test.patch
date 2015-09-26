@@ -9,21 +9,6 @@ Subject: [PATCH] test
  test-requirements.txt | 2 +-
  3 files changed, 4 insertions(+), 4 deletions(-)
 
-diff --git a/requirements.txt b/requirements.txt
-index e8a0907..9670aab 100644
---- a/requirements.txt
-+++ b/requirements.txt
-@@ -2,8 +2,8 @@
- # of appearance. Changing the order has an impact on the overall integration
- # process, which may cause wedges in the gate later.
- 
--pbr<2.0,>=1.4
-+pbr
- six>=1.9.0
- monotonic>=0.3 # Apache-2.0
--futures>=3.0;python_version=='2.7' or python_version=='2.6'
-+futures>=3.0
- contextlib2>=0.4.0 # PSF License
 diff --git a/setup.py b/setup.py
 index d8080d0..056c16c 100644
 --- a/setup.py
