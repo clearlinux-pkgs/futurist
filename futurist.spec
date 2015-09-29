@@ -4,7 +4,7 @@
 #
 Name     : futurist
 Version  : 0.5.0
-Release  : 3
+Release  : 4
 URL      : http://tarballs.openstack.org/futurist/futurist-0.5.0.tar.gz
 Source0  : http://tarballs.openstack.org/futurist/futurist-0.5.0.tar.gz
 Summary  : Useful additions to futures, from the future.
@@ -26,6 +26,7 @@ BuildRequires : extras
 BuildRequires : extras-python
 BuildRequires : fixtures-python
 BuildRequires : flake8-python
+BuildRequires : funcsigs-python
 BuildRequires : futures-python
 BuildRequires : greenlet-python
 BuildRequires : hacking
@@ -73,6 +74,10 @@ Futurist
 %package python
 Summary: python components for the futurist package.
 Group: Default
+Requires: contextlib2-python
+Requires: futures-python
+Requires: monotonic-python
+Requires: six-python
 
 %description python
 python components for the futurist package.
