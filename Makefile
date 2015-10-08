@@ -1,5 +1,5 @@
 PKG_NAME := futurist
-URL := http://tarballs.openstack.org/futurist/futurist-0.5.0.tar.gz
+URL := http://tarballs.openstack.org/futurist/futurist-0.6.0.tar.gz
 ARCHIVES :=
 
 include ../common/Makefile.common
