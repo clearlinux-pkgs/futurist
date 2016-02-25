@@ -1,6 +1,14 @@
 CHANGES
 =======
 
+0.13.0
+------
+
+* Single quote the callables name (when submission errors
+* Updated from global requirements
+* Reschedule failed periodic tasks after a short delay
+* Fix wrong comparison in reject_when_reached
+
 0.12.0
 ------
 
