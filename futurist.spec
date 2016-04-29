@@ -4,7 +4,7 @@
 #
 Name     : futurist
 Version  : 0.13.0
-Release  : 13
+Release  : 14
 URL      : http://tarballs.openstack.org/futurist/futurist-0.13.0.tar.gz
 Source0  : http://tarballs.openstack.org/futurist/futurist-0.13.0.tar.gz
 Summary  : Useful additions to futures, from the future.
