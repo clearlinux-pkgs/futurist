@@ -1,10 +1,20 @@
 CHANGES
 =======
 
+0.14.0
+------
+
+* Updated from global requirements
+* Fix 'on_failure' param not be used
+* Use prettytable to show pretty schedule/active/planned time table
+* Fix time related check in rejection test
+* Reduce/remove duplication in run functions
+* Fix jitter strategies
+
 0.13.0
 ------
 
-* Single quote the callables name (when submission errors
+* Single quote the callables name (when submission errors)
 * Updated from global requirements
 * Reschedule failed periodic tasks after a short delay
 * Fix wrong comparison in reject_when_reached
