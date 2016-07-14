@@ -1,6 +1,13 @@
 CHANGES
 =======
 
+0.15.0
+------
+
+* Don't include openstack/common in flake8 exclude list
+* Updated from global requirements
+* Begin adding our own thread pool executor
+
 0.14.0
 ------
 
