@@ -1,6 +1,12 @@
 CHANGES
 =======
 
+0.16.0
+------
+
+* Remove 'smart' idleness check
+* Add Python 3.5 classifier and venv
+
 0.15.0
 ------
 
