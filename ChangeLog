@@ -1,6 +1,11 @@
 CHANGES
 =======
 
+0.17.0
+------
+
+* Remove discover from test-requirements
+
 0.16.0
 ------
 
