@@ -4,7 +4,7 @@
 #
 Name     : futurist
 Version  : 0.19.0
-Release  : 23
+Release  : 24
 URL      : http://tarballs.openstack.org/futurist/futurist-0.19.0.tar.gz
 Source0  : http://tarballs.openstack.org/futurist/futurist-0.19.0.tar.gz
 Summary  : Useful additions to futures, from the future.
