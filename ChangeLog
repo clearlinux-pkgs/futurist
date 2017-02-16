@@ -1,6 +1,22 @@
 CHANGES
 =======
 
+0.21.0
+------
+
+* Removes unnecessary utf-8 coding
+* Add Constraints support
+* Show team and repo badges on README
+
+0.20.0
+------
+
+* replace _callables by _works
+* Updated from global requirements
+* Updated from global requirements
+* Add reno for release notes management
+* Updated from global requirements
+
 0.19.0
 ------
 
