@@ -6,7 +6,7 @@
 #
 Name     : futurist
 Version  : 0.21.0
-Release  : 28
+Release  : 29
 URL      : http://tarballs.openstack.org/futurist/futurist-0.21.0.tar.gz
 Source0  : http://tarballs.openstack.org/futurist/futurist-0.21.0.tar.gz
 Source99 : http://tarballs.openstack.org/futurist/futurist-0.21.0.tar.gz.asc
@@ -14,6 +14,11 @@ Summary  : Useful additions to futures, from the future.
 Group    : Development/Tools
 License  : Apache-2.0
 Requires: futurist-python
+Requires: contextlib2
+Requires: futures
+Requires: monotonic
+Requires: pbr
+Requires: six
 BuildRequires : Babel
 BuildRequires : Jinja2
 BuildRequires : MarkupSafe-python
@@ -26,7 +31,6 @@ BuildRequires : coverage-python
 BuildRequires : discover-python
 BuildRequires : doc8-python
 BuildRequires : docutils-python
-BuildRequires : enum34-python
 BuildRequires : eventlet-python
 BuildRequires : extras
 BuildRequires : extras-python
@@ -53,7 +57,6 @@ BuildRequires : python-dev
 BuildRequires : python-mimeparse-python
 BuildRequires : python-mock-python
 BuildRequires : python3-dev
-BuildRequires : pytz-python
 BuildRequires : requests-python
 BuildRequires : restructuredtext_lint-python
 BuildRequires : setuptools
@@ -79,10 +82,6 @@ Team and repository tags
 %package python
 Summary: python components for the futurist package.
 Group: Default
-Requires: contextlib2-python
-Requires: futures-python
-Requires: monotonic-python
-Requires: six-python
 
 %description python
 python components for the futurist package.
@@ -93,7 +92,7 @@ python components for the futurist package.
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1487206402
+export SOURCE_DATE_EPOCH=1489027237
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
@@ -103,7 +102,7 @@ export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 PYTHONPATH=%{buildroot}/usr/lib/python2.7/site-packages python2 setup.py test
 %install
-export SOURCE_DATE_EPOCH=1487206402
+export SOURCE_DATE_EPOCH=1489027237
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
