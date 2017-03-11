@@ -6,7 +6,7 @@
 #
 Name     : futurist
 Version  : 0.21.0
-Release  : 29
+Release  : 30
 URL      : http://tarballs.openstack.org/futurist/futurist-0.21.0.tar.gz
 Source0  : http://tarballs.openstack.org/futurist/futurist-0.21.0.tar.gz
 Source99 : http://tarballs.openstack.org/futurist/futurist-0.21.0.tar.gz.asc
@@ -19,57 +19,26 @@ Requires: futures
 Requires: monotonic
 Requires: pbr
 Requires: six
-BuildRequires : Babel
-BuildRequires : Jinja2
-BuildRequires : MarkupSafe-python
-BuildRequires : Pygments
-BuildRequires : Sphinx-python
-BuildRequires : chardet-python
-BuildRequires : configparser-python
 BuildRequires : contextlib2-python
-BuildRequires : coverage-python
-BuildRequires : discover-python
-BuildRequires : doc8-python
-BuildRequires : docutils-python
 BuildRequires : eventlet-python
-BuildRequires : extras
-BuildRequires : extras-python
-BuildRequires : fixtures-python
-BuildRequires : flake8-python
+BuildRequires : funcsigs-python
 BuildRequires : futures-python
 BuildRequires : greenlet-python
-BuildRequires : hacking
-BuildRequires : linecache2-python
-BuildRequires : mccabe-python
 BuildRequires : monotonic-python
-BuildRequires : mox3-python
-BuildRequires : oslosphinx-python
 BuildRequires : oslotest-python
 BuildRequires : pbr
-BuildRequires : pep8
 BuildRequires : pip
 BuildRequires : pluggy
-BuildRequires : prettytable-python
+BuildRequires : prettytable
 BuildRequires : py-python
-BuildRequires : pyflakes-python
 BuildRequires : pytest
 BuildRequires : python-dev
-BuildRequires : python-mimeparse-python
 BuildRequires : python-mock-python
 BuildRequires : python3-dev
-BuildRequires : requests-python
-BuildRequires : restructuredtext_lint-python
+BuildRequires : reno-python
 BuildRequires : setuptools
-BuildRequires : six
-BuildRequires : six-python
-BuildRequires : stevedore
 BuildRequires : testrepository-python
-BuildRequires : testscenarios
-BuildRequires : testtools
-BuildRequires : testtools-python
 BuildRequires : tox
-BuildRequires : traceback2-python
-BuildRequires : unittest2-python
 BuildRequires : virtualenv
 
 %description
@@ -92,7 +61,7 @@ python components for the futurist package.
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1489027237
+export SOURCE_DATE_EPOCH=1489274237
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
@@ -102,7 +71,7 @@ export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 PYTHONPATH=%{buildroot}/usr/lib/python2.7/site-packages python2 setup.py test
 %install
-export SOURCE_DATE_EPOCH=1489027237
+export SOURCE_DATE_EPOCH=1489274237
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
