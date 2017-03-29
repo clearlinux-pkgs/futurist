@@ -1,6 +1,22 @@
 CHANGES
 =======
 
+0.23.0
+------
+
+* The python 3.4 support is removed
+
+0.22.0
+------
+
+* Updated from global requirements
+* Updated from global requirements
+* Typo fix: arbitary => arbitrary
+* Remove link to modindex
+* Introducing NeverAgain functionality for periodics
+* Update reno for stable/ocata
+* Add re-raising SystemExit exception
+
 0.21.0
 ------
 
