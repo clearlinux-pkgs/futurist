@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xEB6CCA1483FA74EC (infra-root@openstack.org)
 #
 Name     : futurist
-Version  : 1.0.0
-Release  : 33
-URL      : https://tarballs.openstack.org/futurist/futurist-1.0.0.tar.gz
-Source0  : https://tarballs.openstack.org/futurist/futurist-1.0.0.tar.gz
-Source99 : https://tarballs.openstack.org/futurist/futurist-1.0.0.tar.gz.asc
+Version  : 1.1.0
+Release  : 34
+URL      : https://tarballs.openstack.org/futurist/futurist-1.1.0.tar.gz
+Source0  : https://tarballs.openstack.org/futurist/futurist-1.1.0.tar.gz
+Source99 : https://tarballs.openstack.org/futurist/futurist-1.1.0.tar.gz.asc
 Summary  : Useful additions to futures, from the future.
 Group    : Development/Tools
 License  : Apache-2.0
@@ -41,16 +41,16 @@ python components for the futurist package.
 
 
 %prep
-%setup -q -n futurist-1.0.0
+%setup -q -n futurist-1.1.0
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1492439492
+export SOURCE_DATE_EPOCH=1492457800
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1492439492
+export SOURCE_DATE_EPOCH=1492457800
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force

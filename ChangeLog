@@ -1,6 +1,12 @@
 CHANGES
 =======
 
+1.1.0
+-----
+
+* Updated from global requirements
+* Expose underlying timeout error
+
 1.0.0
 -----
 
