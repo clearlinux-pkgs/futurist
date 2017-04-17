@@ -1,6 +1,11 @@
 CHANGES
 =======
 
+1.0.0
+-----
+
+* Do not check spacing if periodic disabled
+
 0.23.0
 ------
 
