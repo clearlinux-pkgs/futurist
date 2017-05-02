@@ -6,7 +6,7 @@
 #
 Name     : futurist
 Version  : 1.1.0
-Release  : 34
+Release  : 35
 URL      : https://tarballs.openstack.org/futurist/futurist-1.1.0.tar.gz
 Source0  : https://tarballs.openstack.org/futurist/futurist-1.1.0.tar.gz
 Source99 : https://tarballs.openstack.org/futurist/futurist-1.1.0.tar.gz.asc
