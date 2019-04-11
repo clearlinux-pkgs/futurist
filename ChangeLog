@@ -1,6 +1,28 @@
 CHANGES
 =======
 
+1.8.1
+-----
+
+* Use template for lower-constraints
+* Change openstack-dev to openstack-discuss
+
+1.8.0
+-----
+
+* Only install monotonic on python2
+* Don't quote {posargs} in tox.ini
+* Remove the duplicated word
+* add lib-forward-testing-python3 test job
+* add python 3.6 unit test job
+* import zuul job settings from project-config
+* Update reno for stable/rocky
+* Switch to stestr
+* Follow the new PTI for document build
+* Add blueprints notes link to README
+* fix tox python3 overrides
+* Trivial: Update pypi url to new url
+
 1.7.0
 -----
 
