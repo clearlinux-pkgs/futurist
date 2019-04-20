@@ -6,7 +6,7 @@
 #
 Name     : futurist
 Version  : 1.8.1
-Release  : 38
+Release  : 39
 URL      : https://tarballs.openstack.org/futurist/futurist-1.8.1.tar.gz
 Source0  : https://tarballs.openstack.org/futurist/futurist-1.8.1.tar.gz
 Source99 : https://tarballs.openstack.org/futurist/futurist-1.8.1.tar.gz.asc
