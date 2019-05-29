@@ -6,7 +6,7 @@
 #
 Name     : futurist
 Version  : 1.8.1
-Release  : 39
+Release  : 40
 URL      : https://tarballs.openstack.org/futurist/futurist-1.8.1.tar.gz
 Source0  : https://tarballs.openstack.org/futurist/futurist-1.8.1.tar.gz
 Source99 : https://tarballs.openstack.org/futurist/futurist-1.8.1.tar.gz.asc
@@ -17,19 +17,18 @@ Requires: futurist-license = %{version}-%{release}
 Requires: futurist-python = %{version}-%{release}
 Requires: futurist-python3 = %{version}-%{release}
 Requires: contextlib2
-Requires: futures
 Requires: monotonic
 Requires: pbr
 Requires: six
 BuildRequires : buildreq-distutils3
+BuildRequires : contextlib2
+BuildRequires : monotonic
 BuildRequires : pbr
+BuildRequires : six
 
 %description
-========================
 Team and repository tags
-========================
-.. image:: https://governance.openstack.org/tc/badges/futurist.svg
-:target: https://governance.openstack.org/tc/reference/tags/index.html
+        ========================
 
 %package license
 Summary: license components for the futurist package.
@@ -65,7 +64,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1554992525
+export SOURCE_DATE_EPOCH=1559111979
+export GCC_IGNORE_WERROR=1
+export CFLAGS="$CFLAGS -fno-lto "
+export FCFLAGS="$CFLAGS -fno-lto "
+export FFLAGS="$CFLAGS -fno-lto "
+export CXXFLAGS="$CXXFLAGS -fno-lto "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 

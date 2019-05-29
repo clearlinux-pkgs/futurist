@@ -2,3 +2,4 @@
 # undesirable. One entry per line, no whitespace.
 babel.dates-python
 eventlet.green-python
+futures
