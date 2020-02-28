@@ -6,10 +6,10 @@
 #
 Name     : futurist
 Version  : 1.8.1
-Release  : 43
+Release  : 44
 URL      : https://tarballs.openstack.org/futurist/futurist-1.8.1.tar.gz
 Source0  : https://tarballs.openstack.org/futurist/futurist-1.8.1.tar.gz
-Source99 : https://tarballs.openstack.org/futurist/futurist-1.8.1.tar.gz.asc
+Source1  : https://tarballs.openstack.org/futurist/futurist-1.8.1.tar.gz.asc
 Summary  : Useful additions to futures, from the future.
 Group    : Development/Tools
 License  : Apache-2.0
@@ -27,8 +27,38 @@ BuildRequires : pbr
 BuildRequires : six
 
 %description
+========================
 Team and repository tags
-        ========================
+========================
+
+.. image:: https://governance.openstack.org/tc/badges/futurist.svg
+    :target: https://governance.openstack.org/tc/reference/tags/index.html
+
+.. Change things from this point on
+
+========
+Futurist
+========
+
+.. image:: https://img.shields.io/pypi/v/futurist.svg
+    :target: https://pypi.org/project/futurist/
+    :alt: Latest Version
+
+.. image:: https://img.shields.io/pypi/dm/futurist.svg
+    :target: https://pypi.org/project/futurist/
+    :alt: Downloads
+
+Code from the future, delivered to you in the **now**. The goal of this library
+would be to provide a well documented futures classes/utilities/additions that
+allows for providing a level of transparency in how asynchronous work gets
+executed. This library currently adds statistics gathering, an eventlet
+executor, a synchronous executor etc.
+
+* Free software: Apache license
+* Documentation: https://docs.openstack.org/futurist/latest/
+* Source: https://git.openstack.org/cgit/openstack/futurist
+* Bugs: https://bugs.launchpad.net/futurist
+* Blueprints: https://blueprints.launchpad.net/futurist
 
 %package license
 Summary: license components for the futurist package.
@@ -51,6 +81,7 @@ python components for the futurist package.
 Summary: python3 components for the futurist package.
 Group: Default
 Requires: python3-core
+Provides: pypi(futurist)
 
 %description python3
 python3 components for the futurist package.
@@ -58,13 +89,15 @@ python3 components for the futurist package.
 
 %prep
 %setup -q -n futurist-1.8.1
+cd %{_builddir}/futurist-1.8.1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1559111979
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1582925253
+# -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$CFLAGS -fno-lto "
@@ -77,7 +110,7 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/futurist
-cp LICENSE %{buildroot}/usr/share/package-licenses/futurist/LICENSE
+cp %{_builddir}/futurist-1.8.1/LICENSE %{buildroot}/usr/share/package-licenses/futurist/294b43b2cec9919063be1a3b49e8722648424779
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -88,7 +121,7 @@ echo ----[ mark ]----
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/futurist/LICENSE
+/usr/share/package-licenses/futurist/294b43b2cec9919063be1a3b49e8722648424779
 
 %files python
 %defattr(-,root,root,-)

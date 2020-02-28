@@ -1,4 +1,8 @@
 # This file contains recursive sources that require this package
+glance
+horizon
+ironic
+nova
 oslo.messaging
 taskflow
 tooz
