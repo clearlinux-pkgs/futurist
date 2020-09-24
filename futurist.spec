@@ -6,7 +6,7 @@
 #
 Name     : futurist
 Version  : 2.2.0
-Release  : 45
+Release  : 46
 URL      : https://tarballs.openstack.org/futurist/futurist-2.2.0.tar.gz
 Source0  : https://tarballs.openstack.org/futurist/futurist-2.2.0.tar.gz
 Source1  : https://tarballs.openstack.org/futurist/futurist-2.2.0.tar.gz.asc
